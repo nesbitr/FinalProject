@@ -42,7 +42,7 @@ public void init(){
 
  numAsteroids=0;
  level=0; //will be incremented to 1 when first level is set up
- astRadius=60; //values used to create the asteroids
+ astRadius=40; //values used to create the asteroids
  minAstVel=.5;
  maxAstVel=5;
  astNumHits=3;
@@ -63,7 +63,21 @@ public void setUpNextLevel(){ //start new level with one more asteroid
  // create a new, inactive ship centered on the screen
  // I like .35 for acceleration, .98 for velocityDecay, and
  // .1 for rotationalSpeed. They give the controls a nice feel.
- ship=new Ship(250,250,0,.35,.98,.1,12);
+ if (level<=2){
+	 ship=new Ship(250,250,0,.35,.98,.1,12);
+ }
+ if (level>=3){
+	 ship=new Ship(250,250,0,.35,.98,.15,10);
+ }
+ if (level>=4){
+	 ship=new Ship(250,250,0,.35,.98,.2,9);
+ }
+ if (level>=5){
+	 ship=new Ship(250,250,0,.35,.98,.3,7);
+ }
+ if (level>=6){
+	 ship=new Ship(250,250,0,.35,.98,.45,5);
+ }
  numShots=0; //no shots on the screen at beginning of level
  paused=false;
  shooting=false;
@@ -72,9 +86,9 @@ public void setUpNextLevel(){ //start new level with one more asteroid
  //the split asteroids are created first, then the original
  //one is deleted). The level number is equal to the
  //number of asteroids at it's start.
- asteroids=new Asteroid[level *
+ asteroids=new Asteroid[2*level *
  (int)Math.pow(astNumSplit,astNumHits-1)+1];
- numAsteroids=level;
+ numAsteroids=2*level;
  //create asteroids in random spots on the screen
  for(int i=0;i<numAsteroids;i++)
  asteroids[i]=new Asteroid(Math.random()*dim.width,
@@ -82,8 +96,24 @@ public void setUpNextLevel(){ //start new level with one more asteroid
  maxAstVel,astNumHits,astNumSplit);
  }
 
+public int returnLevel(){
+	return level;
+}
 public void paint(Graphics gfx){
- g.setColor(Color.black);
+ 
+ if(level<=1){
+	 g.setColor(Color.red);
+ }
+ if (level>=3){
+	 g.setColor(Color.black);
+ }
+ if (level>=5){
+	 g.setColor(Color.green);
+	 
+ }
+ if (level>=7){
+	 g.setColor(Color.darkGray);
+ }
  g.fillRect(0,0,500,500);
 
  for(int i=0;i<numShots;i++) //draw all the shots on the screen
