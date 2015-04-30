@@ -1,0 +1,28 @@
+<resources>
+
+    <!-- strings.xml is where all the values of the strings used in your views are stored.
+    They are referenced in the .xml files, which are subsequently used in your code (.java files) -->
+    
+    <string name="app_name">Unit Length Converter</string>
+    
+    <!-- Main.xml Strings -->
+    <string name="enter_val">Enter Measurement Value: </string>
+    
+    <!-- have the students correct the string -->
+    <string name="select_convers">Select conversion: </string>
+    <string name="button_cmtoin">cm to in</string>
+    <string name="button_intocm">in to cm </string>
+    <string name="button_fttom">ft to m</string>
+    <string name="button_mtoft">m to ft</string>
+    <string name="button_ydtom">yd to m</string>
+    <string name="button_mtoyd">m to yd</string>
+    <!-- Result.xml Strings -->
+    <string name="final_amount">Your Conversion Is: </string>
+
+    <!--<string name="total_amount">Your new total is: </string>  -->
+    <string name="button_finished">Enter Another Value</string>
+    
+    <!--  Error Strings -->
+    <string name="error_et">Error!!! Please enter a measurement value.</string>
+    
+</resources>

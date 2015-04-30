@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    android:background= "@drawable/ruler">
+
+
+     
+     <!-- Prompts user measure Value -->
+    <TextView
+        android:id="@+id/text_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="@string/enter_val"
+        android:textSize="20sp" />
+
+    <!-- textbox to input value-->
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_prompt"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:ems="10"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+    </EditText>
+<!--declares the buttons-->
+    <!--the bottom button to convert from meters to yards -->
+    <Button
+
+        android:id="@+id/mtoyd"
+        android:text="@string/button_mtoyd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"/>
+    <!--button to convert from yards to meters -->
+    <Button
+        android:id="@+id/ydtom"
+        android:text="@string/button_ydtom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mtoyd"/>
+    <!-- button to convert from meters to feet -->
+    <Button
+        android:id="@+id/mtoft"
+        android:text="@string/button_mtoft"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ydtom"/>
+    <!--button to convert from feet to meters -->
+  	<Button
+  		android:id="@+id/fttom"
+        android:text="@string/button_fttom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/mtoft"/>
+
+    <!--button to convert from inches to centimeters -->
+    <Button
+        android:id="@+id/intocm"
+        android:text="@string/button_intocm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/fttom"/>
+    <!--button to convert from centimeters to meters -->
+    <Button
+        android:id="@+id/cmtoin"
+        android:text="@string/button_cmtoin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_above="@+id/intocm"/>
+    
+
+    <TextView
+        android:id="@+id/value_prompt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:text="@string/select_convers"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/cmtoin"/>
+
+</RelativeLayout><!-- From: file:/Users/punker422/Downloads/Unit%20Length%20Converter/Unit%20Length%20Converter/app/src/main/res/layout/main.xml -->

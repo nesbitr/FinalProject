@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/Users/punker422/Downloads/Unit%20Length%20Converter/Unit%20Length%20Converter/app/src/main/res/values/strings.xml -->
+    <eat-comment/>
+    <string name="app_name">Unit Length Converter</string>
+    <string name="button_cmtoin">cm to in</string>
+    <string name="button_finished">Enter Another Value</string>
+    <string name="button_fttom">ft to m</string>
+    <string name="button_intocm">in to cm </string>
+    <string name="button_mtoft">m to ft</string>
+    <string name="button_mtoyd">m to yd</string>
+    <string name="button_ydtom">yd to m</string>
+    <string name="enter_val">Enter Measurement Value: </string>
+    <string name="error_et">Error!!! Please enter a measurement value.</string>
+    <string name="final_amount">Your Conversion Is: </string>
+    <string name="select_convers">Select conversion: </string>
+    <!-- From: file:/Users/punker422/Downloads/Unit%20Length%20Converter/Unit%20Length%20Converter/app/src/main/res/values/styles.xml -->
+    <eat-comment/>
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+        <!--
+            Theme customizations available in newer API levels can go in
+            res/values-vXX/styles.xml, while customizations related to
+            backward-compatibility can go here.
+        -->
+    </style>
+    <style name="AppTheme" parent="AppBaseTheme">
+        <!-- All customizations that are NOT specific to a particular API-level can go here. -->
+    </style>
+</resources>
